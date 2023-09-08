@@ -14,7 +14,7 @@ Para iniciar o projeto, siga estas etapas:
     Tenha intalado e como variavel de ambiente o **git** e o **node.js**.
 1. Clone o repositório para o seu ambiente local.
     ```
-        git clone https://github.com/ArthurFPUnifeob/TeamCDS-PI2
+    git clone https://github.com/ArthurFPUnifeob/TeamCDS-PI2
     ```
 2. Execute o seguinte comando para instalar as dependências do Node.js:
    ```
@@ -26,7 +26,7 @@ Para iniciar o projeto, siga estas etapas:
    ```
 
 ## Demonstração
-[Link para o modelo no Figma](https://www.figma.com/exemplo)
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FvIdcC6WqRJ0s30vFOwvb6t%2FProjeto-PI%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3Dj1VbpS3FjYJj6N1F-1" allowfullscreen></iframe>
 
 ## Estrutura de Diretórios
 A estrutura de diretórios do projeto é organizada da seguinte forma:
