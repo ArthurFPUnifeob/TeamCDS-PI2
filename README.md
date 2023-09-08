@@ -26,7 +26,8 @@ Para iniciar o projeto, siga estas etapas:
    ```
 
 ## Demonstração
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FvIdcC6WqRJ0s30vFOwvb6t%2FProjeto-PI%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3Dj1VbpS3FjYJj6N1F-1" allowfullscreen></iframe>
+[Link para o Projeto no Figma](https://www.figma.com/file/vIdcC6WqRJ0s30vFOwvb6t/Projeto-PI?type=design&node-id=0%3A1&mode=design&t=j1VbpS3FjYJj6N1F-1)
+
 
 ## Estrutura de Diretórios
 A estrutura de diretórios do projeto é organizada da seguinte forma:
@@ -46,7 +47,7 @@ Este projeto foi desenvolvido por um grupo de estudantes da Unifeob do segundo m
 - Virgilio
 - Yan
 
-Além disso, os professores Rui, Mariangela, Marcelo, Nivaldo, Max e Renata atuam como revisores do projeto.
+Além disso, os professores Ruy, Mariangela, Marcelo, Nivaldo, Max e Renata atuam como revisores do projeto.
 
 ## Status do Projeto
 O projeto está em desenvolvimento e evoluindo continuamente. Fique à vontade para contribuir ou acompanhar o progresso.
