@@ -1,0 +1,22 @@
+{
+  "name": "teamcds-pi2",
+  "version": "1.0.0",
+  "description": "O TeamCDS-PI2 é um projeto universitário desenvolvido por alunos dos cursos de Ciência da Computação e Análise e Desenvolvimento de Sistemas. Trata-se de um aplicativo desktop projetado para analisar dados de segurança e apresentá-los de forma concisa em um painel de controle. Em outras palavras, o projeto processa dados fictícios que em ideia seriam provenientes de um modelo de inteligência artificial e os exibe em um dashboard intuitivo.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArthurFPUnifeob/TeamCDS-PI2.git"
+  },
+  "author": "TeamCDS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArthurFPUnifeob/TeamCDS-PI2/issues"
+  },
+  "homepage": "https://github.com/ArthurFPUnifeob/TeamCDS-PI2#readme",
+  "devDependencies": {
+    "electron": "^26.2.0"
+  }
+}
