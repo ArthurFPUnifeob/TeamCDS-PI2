@@ -7,7 +7,12 @@ O TeamCDS-PI2 é um projeto universitário desenvolvido por alunos dos cursos de
 A motivação por trás deste projeto surge da crescente importância da segurança em nossa sociedade. Diante de incidentes recentes em escolas e eventos públicos, acreditamos que a tecnologia pode desempenhar um papel crucial na mitigação desses eventos. Nosso objetivo é fornecer uma ferramenta que auxilie os profissionais de segurança a tomar decisões informadas e rápidas.
 
 ## Tecnologias Utilizadas
-O projeto utiliza uma combinação de tecnologias web, incluindo HTML5, CSS3 e JavaScript. Além disso, faz uso do framework Electron para criar um aplicativo desktop multiplataforma. Detalhes sobre outras dependências específicas serão definidos posteriormente.
+O projeto utiliza uma combinação de tecnologias web, incluindo HTML5, CSS3 e JavaScript. Além disso, faz uso do framework Electron para criar um aplicativo desktop multiplataforma.
+Lista de dependencias: 
+  - Electron
+  - Chart.js
+  
+
 
 ## Como Iniciar
 Para iniciar o projeto, siga estas etapas:
@@ -38,7 +43,7 @@ A estrutura de diretórios do projeto é organizada da seguinte forma:
 
 - **`src`**: Nesta pasta, você encontrará o código-fonte do aplicativo.
   - **`js`**: Aqui estão os arquivos JavaScript que contêm a lógica principal do aplicativo.
-  - **`style`**: Contém arquivos CSS ou pré-processadores de CSS (por exemplo, SCSS ou LESS) para estilizar o aplicativo.
+  - **`style`**: Contém arquivos CSS para estilizar o aplicativo.
 
 - **`main.js`**: Este é o ponto de entrada principal do aplicativo Electron. Aqui, você configura e inicia o aplicativo.
 
