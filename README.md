@@ -64,7 +64,6 @@ Este projeto foi desenvolvido por um grupo de estudantes da Unifeob do segundo m
 - Pedro
 - Luis
 - Virgilio
-- Yan
 
 Além disso, os professores Ruy, Mariangela, Marcelo, Nivaldo, Max e Renata atuam como revisores do projeto.
 
