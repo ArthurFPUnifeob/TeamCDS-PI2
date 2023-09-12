@@ -1,0 +1,51 @@
+/* Reset margins and paddings on all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Define a base font and size for better consistency */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Remove default link decorations */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Set default styles for unordered and ordered lists */
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Add styles for common elements like headings and paragraphs */
+  h1, h2, h3, p {
+    margin-bottom: 1rem;
+  }
+  
+  /* Add styles for form elements */
+  input, textarea, button {
+    font-family: inherit;
+  }
+  
+  /* Add box styles for form elements */
+  input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Add basic button styles */
+  button {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+  }
