@@ -1,0 +1,48 @@
+:root{
+    --blue-100: #004E7A;
+    --blue-200: #39606D;
+
+    --gray: #C2C2C2;
+
+    --white: #F3F3F7;
+    --white_trans: #F3F3F799;
+
+    --black: #141414;
+}  
+
+h1 {
+  font-size: 5.000rem;
+  font-family: exo;
+}
+
+
+h2 {
+  font-size: 3.833rem;
+  font-family: exo;
+}
+
+h3 {
+  font-size: 2.917rem;
+  font-family: exo;
+}
+
+
+h4 {
+  font-size: 2.250rem;
+  font-family: exo;
+}
+
+h5 {
+  font-size: 1.750rem;
+  font-family: exo;
+}
+
+.sub {
+  font-size: 1.333rem;
+  font-family: poppins;
+}
+
+p {
+  font-size: 1.000rem;
+  font-family: poppins;
+}
