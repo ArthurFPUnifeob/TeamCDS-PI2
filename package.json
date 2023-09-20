@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/ArthurFPUnifeob/TeamCDS-PI2#readme",
   "devDependencies": {
-    "electron": "^26.2.0"
+    "electron": "^26.2.0",
+    "electron-reloader": "^1.2.3"
   },
   "dependencies": {
     "chart.js": "^4.4.0"
