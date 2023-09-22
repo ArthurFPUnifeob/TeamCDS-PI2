@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
   <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
-  <meta name="description" content="descrição da pagina para SEO">
 
   <!-- All links to css here -->
   <link rel="stylesheet" href="../../src/style/global.css">
@@ -15,6 +14,34 @@
 </head>
 
 <body>
-
+  <form action="index.html">
+    <label for="full-name__input">
+      Nome completo
+      <input type="text" id="full-name__input" required>
+    </label>
+    <label for="CNPJ">
+      CNPJ
+      <input type="number" id="CNPJ" required>
+    </label>
+    <label for="tel__input">
+      Telefone
+      <input type="tel" id="tel__input" required>
+    </label>
+    <label for="email">
+      Email
+      <input type="email" id="email" required>
+    </label>
+    <label for="password">
+      Senha
+      <input type="password" id="password" required>
+    </label>
+    <label for="confirm-password">
+      confirmar senha
+      <input type="password" id="confirm-password" required>
+    </label>
+    <button type="submit">
+      Criar conta   
+    </button>
+  </form>
 </body>
 </html>
