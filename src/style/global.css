@@ -1,3 +1,5 @@
+@import url(reset.css);
+
 :root{
     --blue-100: #004E7A;
     --blue-200: #39606D;
@@ -9,6 +11,12 @@
 
     --black: #141414;
 }  
+
+body {
+  background: rgb(0,78,122);
+  background: linear-gradient(180deg, rgba(0,78,122,1) 25%, rgba(0,0,0,1) 100%);
+  height: 100vh;
+}
 
 h1 {
   font-size: 5.000rem;
@@ -45,8 +53,4 @@ h5 {
 p {
   font-size: 1.000rem;
   font-family: poppins;
-}
-
-br{
-  background-color: red;
 }
