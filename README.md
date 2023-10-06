@@ -39,12 +39,9 @@ A estrutura de diretórios do projeto é organizada da seguinte forma:
 
 **`public`**: Esta pasta contém recursos públicos que podem ser acessados diretamente no aplicativo Electron.
   - **`assets`**: Armazene recursos estáticos usados pelo aplicativo, como imagens, ícones, etc.
-  - **`pages`**: Contém arquivos HTML que representam as diferentes páginas ou interfaces do aplicativo.
+  - **`renderer`**: Contém subpastas com o nome de cada rota nelas contem um arquivo HTML, um css e um js que representam as diferentes páginas ou interfaces do aplicativo.
 
-- **`src`**: Nesta pasta, você encontrará o código-fonte do aplicativo.
-  - **`js`**: Aqui estão os arquivos JavaScript que contêm a lógica principal do aplicativo.
-  - **`style`**: Contém arquivos CSS para estilizar o aplicativo.
-
+- **`backend`**: contem arquivos js, nao correlatos diretamente as paginas.
 - **`main.js`**: Este é o ponto de entrada principal do aplicativo Electron. Aqui, você configura e inicia o aplicativo.
 
 - **`.gitignore`**: Este arquivo especifica quais arquivos e pastas devem ser ignorados pelo Git durante o versionamento do projeto. Geralmente, arquivos de construção, dependências e arquivos de configuração são listados aqui para evitar que sejam rastreados pelo Git.
