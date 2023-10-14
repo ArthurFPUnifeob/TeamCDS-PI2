@@ -1,5 +1,41 @@
 @import url(reset.css);
 
+@font-face {
+  font-family: 'Exo';
+  src: url('../../assets/typo/Exo/Exo-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Exo';
+  src: url('../../assets/typo/Exo/Exo-Medium.ttf') format('truetype');
+  font-weight: 500; /* Médio */
+}
+
+@font-face {
+  font-family: 'Exo';
+  src: url('../../assets/typo/Exo/Exo-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../assets/typo/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../assets/typo/Poppins/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500; /* Médio */
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../assets/typo/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
 :root{
     --blue-100: #004E7A;
     --blue-200: #39606D;
