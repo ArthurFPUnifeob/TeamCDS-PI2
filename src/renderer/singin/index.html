@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+
+  <!-- All links to css here -->
+  <link rel="stylesheet" href="../../style/global.css">
+  <link rel="stylesheet" href="./singin.css">
+
+  <title>Cadastrar</title>
+</head>
+
+<body>
+  <main class="main-container">
+    <section class="form-container">
+      <h1 class="form-title">Cadastre-se</h1>
+      <form class="form" action="">
+        <label for="name" class="label-name">Nome completo:
+          <input type="text" name="name" id="name-input" placeholder="Digite seu nome completo" required>
+        </label>
+
+        <div class="container-row">
+          <label for="cnpj">CNPJ:
+            <input type="number" role="" name="cnpj" id="cnpj-input" placeholder="Digite seu CNPJ" required>
+          </label>
+          <label for="telefone">Telefone:
+            <input type="tel" name="telefone" id="telefone-input" placeholder="Digite seu telefone" required>
+          </label>
+        </div>
+
+
+        <label for="email" class="label-name">Email:
+          <input type="email" name="email" id="email-input" placeholder="Digite seu email" required>
+        </label>
+
+        <div class="container-row">
+        <label for="password">Senha:
+          <input type="password" placeholder="Digite sua senha" required>
+        </label>
+
+        <label for="confirm-password">Confirmar senha
+          <input type="password" placeholder="Confirmar senha" required>
+        </label>
+        </div>
+        <button type="submit">Criar conta</button>
+      </form>
+    </section>
+  </main>

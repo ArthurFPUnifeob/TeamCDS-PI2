@@ -1,5 +1,5 @@
 const { app, BrowserWindow } = require('electron')
-
+require('electron-reloader')(module)
 
 function createWindow () {
   const win = new BrowserWindow({
@@ -10,7 +10,7 @@ function createWindow () {
     }
   })
 
-  win.loadFile('./public/pages/index.html')
+  win.loadFile('src/renderer/singin/index.html')
 }
 
 app.whenReady().then(() => {
@@ -29,6 +29,4 @@ app.whenReady().then(() => {
   }
 })
 
-try {
-  require('electron-reloader')(module)
-} catch (_) {}
+
