@@ -1,4 +1,5 @@
 import { DBConnect } from "./DBConnect.js"
+import envvars from  "./env.js"
 
 class DBHandler extends DBConnect {
     constructor(host, user, password, database) {
@@ -8,5 +9,5 @@ class DBHandler extends DBConnect {
         this.requisition(`insert into ${table} (${attributeName}, ${values})`)
     }
 }
-const DBHandler = new DBHandler('127.0.0.1', 'root', '#1234Tur', 'teamcds-pi2db')
+const DBHandler = new DBHandler(envvars[0], envvars[1], envvars[2], envvars[3])
 export default DBHandler
