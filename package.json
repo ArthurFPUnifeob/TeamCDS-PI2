@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "O TeamCDS-PI2 é um projeto universitário desenvolvido por alunos dos cursos de Ciência da Computação e Análise e Desenvolvimento de Sistemas. Trata-se de um aplicativo desktop projetado para analisar dados de segurança e apresentá-los de forma concisa em um painel de controle. Em outras palavras, o projeto processa dados fictícios que em ideia seriam provenientes de um modelo de inteligência artificial e os exibe em um dashboard intuitivo.",
   "main": "src/main.js",
+  "type":"commonjs",
   "scripts": {
     "start": "electron ."
   },
@@ -23,8 +24,6 @@
   "dependencies": {
     "bootstrap": "^5.3.2",
     "chart.js": "^4.4.0",
-    "dotenv": "^16.3.1",
-    "mysql": "^2.18.1",
     "mysql2": "^3.6.2"
   }
 }

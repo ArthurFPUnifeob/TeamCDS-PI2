@@ -18,7 +18,7 @@
   <main class="main-container">
     <section class="form-container">
       <h1 class="form-title">Cadastre-se</h1>
-      <form class="form" action="">
+      <form id="singin-form" class="form" action="">
         <label for="name" class="label-name">Nome completo:
           <input type="text" name="name" id="name-input" placeholder="Digite seu nome completo" required>
         </label>
@@ -31,7 +31,6 @@
             <input type="tel" name="telefone" id="telefone-input" placeholder="Digite seu telefone" required>
           </label>
         </div>
-
 
         <label for="email" class="label-name">Email:
           <input type="email" name="email" id="email-input" placeholder="Digite seu email" required>
@@ -46,7 +45,8 @@
           <input type="password" placeholder="Confirmar senha" required>
         </label>
         </div>
-        <button type="submit">Criar conta</button>
+        <button type="submit" value="">Criar conta</button>
       </form>
     </section>
+    <script src="script.js"></script>
   </main>
