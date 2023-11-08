@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <meta name="description" content="descrição da pagina para SEO">
+
+  <!-- All links to css here -->
+  <link rel="stylesheet" href="../../style/reset.css">
+  <link rel="stylesheet" href="../../style/global.css">
+  <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../adminScreen/adminScreen.css">
+
+
+  <title>Configurações</title>
+</head>
+
+<body>
+  <!-- section 1 - sidebar -->
+  <div class="sidebar-container">
+    <nav>
+      <img src="../../../assets/logo.png" alt="logo" class="side_logo">
+        <ul class="sidebar-items">
+            <li >
+               <i class="bi bi-house-fill"></i>
+              <a href="../dashbord/dashboard.html">Dashboard</a>
+            </li>
+            <li>
+              
+              <i class="bi bi-person-fill"></i>
+              <a href="../canview/canview.html">Cam Viwer</a>
+            </li>
+            <li>
+              <i class="bi bi-gear-fill"></i>
+              <a href="../adminScreen/adminScreen.html">Configurações</a>
+            </li>
+            <li>
+              <i class="bi bi-box-arrow-left"></i>
+              <a href="../home/index.html" class="default-btn">Log out</a>
+            </li>
+        </ul>
+    </nav>
+  </div>
+  
+  <!-- main -->
+  <main>
+    <nav class="navbar-container">
+    <ul class="navbar-items">
+      <li>
+        <div class="dropdown">
+        <button class="dropbtn">Opções de IA</button>
+          <div class="dropdown-content">
+            <h4>Confiança na detecção</h4>
+            <p>Regulamenta a confiabilidade da IA em separar casos de incidentes de não incidentes,uma precisão maior separa só os casos onde a certeza de perigo. Diminua a para receber mais ocorrecias de possiveis incidentes.</p>
+            <h4>Aglomeração máxima permitida</h4>
+            <div class="max-input">
+              <p>Câmera 1 </p> 
+              <input type="number" name="agr_max" class="agr_max"  placeholder="100 pessoas" required>
+            </div>
+            <div class="max-input">
+              <p>Câmera 2 </p> 
+              <input type="number" name="agr_max" class="agr_max"  placeholder="100 pessoas" required>
+            </div>
+            <div class="max-input">
+              <p>Câmera 3 </p> 
+              <input type="number" name="agr_max" class="agr_max"  placeholder="100 pessoas" required>
+            </div>
+            <div class="max-input">
+              <p>Câmera 4 </p> 
+              <input type="number" name="agr_max" class="agr_max"  placeholder="100 pessoas" required>
+            </div>
+            <div class="max-input">
+              <p>Câmera 5 </p> 
+              <input type="number" name="agr_max" class="agr_max"  placeholder="100 pessoas" required>
+            </div>
+            <div class="max-input">
+              <p>Câmera 6 </p> 
+              <input type="number" name="agr_max" class="agr_max"  placeholder="100 pessoas" required>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown">
+          <button class="dropbtn">Gerenciar senhas</button>
+          <div class="dropdown-content">
+            <h4>Criar nova senha</h4>
+            <p>A senha de descanso serve para o login no aplicativo ao sair. Você pode redefinir a senha quando quiser.</p>
+            <input type="text" name="current-password" id="current password" placeholder="Digite a senha atual " required>
+            <input type="text" name="new-password" id="new-password" placeholder="Digite a nova senha " required>
+            <input type="text" name="new-password" id="new-password" placeholder="Confirme a nova senha " required>
+          </div>
+        </div> 
+      </li>
+      <li>
+        <div class="dropdown">
+          <button class="dropbtn">Gerenciar câmeras</button>
+          <div class="dropdown-content">
+            <button id="add_camera"><i class="bi bi-plus-circle"></i>Adicionar câmera</button>
+            <button id="rmv_camera"><i class="bi bi-x-circle"></i>Remover câmera</button>
+            
+          </div>
+        </div>
+      </li>
+    
+  </ul>
+  </nav>
+  </main>
+  
+</body>
+</html>

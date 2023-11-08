@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <meta name="description" content="descrição da pagina para SEO">
+
+  <!-- All links to css here -->
+  <link rel="stylesheet" href="../../style/reset.css">
+  <link rel="stylesheet" href="../../style/global.css">
+  <link rel="stylesheet" href="../dashbord/dashboard.css">
+  <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  
+
+  <title>dashbord</title>
+</head>
+
+<body>
+  <!-- section 1 - sidebar -->
+  <div class="sidebar-container">
+      <nav>
+        <img src="../../../assets/logo.png" alt="logo" class="side_logo">
+          <ul class="sidebar-items">
+              <li >
+                 <i class="bi bi-house-fill"></i>
+                <a href="../dashbord/dashboard.html">Dashboard</a>
+              </li>
+              <li>
+                
+                <i class="bi bi-person-fill"></i>
+                <a href="../canview/canview.html">Cam Viwer</a>
+              </li>
+              <li>
+                <i class="bi bi-gear-fill"></i>
+                <a href="../adminScreen/adminScreen.html">Configurações</a>
+              </li>
+              <li>
+                <i class="bi bi-box-arrow-left"></i>
+                <a href="../home/index.html" class="default-btn">Log out</a>
+              </li>
+              <li>
+                <div class="dropdown">
+                  <button class="dropbtn">Dropdown</button>
+                  <div class="dropdown-content">
+                    <div class="incident_items">
+                      <ul class="incident_items">
+                          <li>
+                              <input 
+                                  type="checkbox" 
+                                  id="aglomeration" 
+                                  name="optional[]" 
+                                  value="aglomeration">
+                              <label for="aglomeration">Aglomeração</label>
+                          </li>
+                          <li>
+                              <input 
+                                  type="checkbox" 
+                                  id="animal" 
+                                  name="optional[]" 
+                                  value="animal">
+                              <label for="animal">Animal</label>
+                          </li>
+                          <li>
+                              <input 
+                                  type="checkbox" 
+                                  id="fire_gun" 
+                                  name="optional[]" 
+                                  value="fire_gun">
+                              <label for="fire_gun">Arma de fogo</label>
+                          </li>
+                          <li>
+                              <input 
+                                  type="checkbox" 
+                                  id="melee_weapons" 
+                                  name="optional[]" 
+                                  value="melee_weapons">
+                              <label for="melee_weapons">Arma Branca</label>
+                          </li>
+                          <li>
+                            <input 
+                                type="checkbox" 
+                                id="break-in" 
+                                name="optional[]" 
+                                value="break-in">
+                            <label for="break-in">Arrombamento</label>
+                         </li>
+                         <li>
+                           <input 
+                              type="checkbox" 
+                              id="fire" 
+                              name="optional[]" 
+                              value="fire">
+                           <label for="fire">Incêndio</label>
+                         </li>
+                       </ul>
+                  </div>
+                  </div>
+                </div>
+              </li>
+          </ul>
+      </nav>
+  </div>
+    
+<!-- section 2 main -->
+
+
+</body>
+</html>

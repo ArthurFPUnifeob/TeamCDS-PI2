@@ -2,9 +2,8 @@ const Empresa = require('../models/Empresa.js')
 const connection = require('../database/connection.js')
 
 class EmpresaController extends Empresa {
-    static connectionProp = connection
-    constructor() {
-        super(connectionProp)
+    constructor(connetion) {
+        super(connetion)
     }
 
     #validateData(data) {
@@ -12,9 +11,10 @@ class EmpresaController extends Empresa {
     }
 
     createNewEmpresa(data) {
-        super.create()
+        console.log(data)
+        // super.create()
     }
 
 }
 
-module.exports = EmpresaController
+module.exports = new EmpresaController(connection)

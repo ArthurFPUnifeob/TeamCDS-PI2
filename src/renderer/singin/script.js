@@ -9,10 +9,8 @@ singinForm.addEventListener("submit", (e) => {
     singinView.createNewEmpresaHandler(singinFormData)
 })
 
-
-class SinginView extends EmpresaController{ 
+class SinginView {  
     constructor(formdata){
-        super()
         this.formdata = formdata
         this.mapData = new Map()
         this.#createMapData()
@@ -22,9 +20,5 @@ class SinginView extends EmpresaController{
         for(const pair of this.formdata.entries()){
             this.mapData.set(pair[0], pair[1])
         }
-    }
-    
-    createNewEmpresaHandler(){
-        console.log(this.mapData)
     }
 }
