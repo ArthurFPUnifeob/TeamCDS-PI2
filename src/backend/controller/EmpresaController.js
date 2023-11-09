@@ -1,20 +1,22 @@
 const Empresa = require('../models/Empresa.js')
-const connection = require('../database/connection.js')
+const connection = require('../../backend/database/connection.js')
 
 class EmpresaController extends Empresa {
-    constructor(connetion) {
-        super(connetion)
+    constructor(data) {
+        super(connection)
+        this.data = data
+    }
+    #callback() {
+        if (erro) {
+            return erro;
+        } else {
+            return result;
+        }
     }
 
-    #validateData(data) {
-
+    createNewEmpresa() {
+        console.log(this.data)
+        super.create(this.#callback, this.data.get('name'), this.data.get('telefone'), this.data.get('email'), this.data.get('this.'), this.data.get('cnpj'), this.data.get('name')  )
     }
-
-    createNewEmpresa(data) {
-        console.log(data)
-        // super.create()
-    }
-
 }
-
-module.exports = new EmpresaController(connection)
+module.exports =  EmpresaController

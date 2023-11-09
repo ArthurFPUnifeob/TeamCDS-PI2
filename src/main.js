@@ -12,7 +12,7 @@ function createWindow () {
   }
   })
 
-  win.loadFile('src/renderer/singin/index.html')
+  win.loadFile('src/renderer/singin/singin.html')
 }
 
 app.whenReady().then(() => {
