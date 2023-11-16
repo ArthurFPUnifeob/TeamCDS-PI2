@@ -1,3 +1,13 @@
+// filtrar numero
+const $ = require('../../../node_modules/jquery');
+require('../../../node_modules/jquery-mask-plugin');
+
+$(document).ready(function(){
+  $('#cnpj-input').mask('99.999.999/9999-99');
+  $('#telefone-input').mask('(00) 00000-0009');
+});
+
+
 const EmpresaController = require('../../backend/controller/EmpresaController.js')
 
 singinForm = document.getElementById("singin-form")
@@ -22,3 +32,5 @@ class SinginView {
         }
     }
 }
+
+

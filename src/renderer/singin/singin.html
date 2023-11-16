@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  
 
   <!-- All links to css here -->
   <link rel="stylesheet" href="../../style/reset.css">
@@ -21,15 +20,26 @@
       <h1 class="form-title">Cadastre-se</h1>
       <form id="singin-form" class="form">
         <label for="name" class="label-name">Nome completo:
-          <input type="text" name="name" id="name-input" placeholder="Digite seu nome completo" required>
+          <input type="text" 
+            name="name" 
+            id="name-input" 
+            placeholder="Digite seu nome completo" 
+            required>
         </label>
-
         <div class="container-row">
           <label for="cnpj">CNPJ:
-            <input type="number" role="" name="cnpj" id="cnpj-input" placeholder="Digite seu CNPJ" required>
+            <input type="text"
+              name="cnpj" 
+              id="cnpj-input" 
+              placeholder="Digite seu CNPJ" 
+              required>
           </label>
           <label for="telefone">Telefone:
-            <input type="tel" name="telefone" id="telefone-input" placeholder="Digite seu telefone" required>
+            <input type="tel" 
+              name="telefone" 
+              id="telefone-input" 
+              placeholder="Digite seu telefone" 
+              required>
           </label>
         </div>
 
@@ -49,5 +59,10 @@
         <button type="submit" value="">Criar conta</button>
       </form>
     </section>
-    <script src="script.js"></script>
   </main>
+  <script src="../../../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+  <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
+    
