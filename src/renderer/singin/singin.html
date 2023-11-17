@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../../style/reset.css">
   <link rel="stylesheet" href="../../style/global.css">
   <link rel="stylesheet" href="../singin/singin.css">
-  
+
   <title>Cadastrar</title>
 </head>
 
@@ -47,14 +47,18 @@
           <input type="email" name="email" id="email-input" placeholder="Digite seu email" required>
         </label>
 
-        <div class="container-row">
-        <label for="password">Senha:
-          <input type="password" placeholder="Digite sua senha" required>
+        <label for="endereco" class="label-name">Endereço:
+          <input type="text" name="endereco" id="endereco-input" placeholder="Digite seu endereço" required>
         </label>
 
-        <label for="confirm-password">Confirmar senha
-          <input type="password" placeholder="Confirmar senha" required>
-        </label>
+        <div class="container-row">
+          <label for="password" >Senha:
+            <input type="password" name="password" placeholder="Digite sua senha" required>
+          </label>
+
+          <label for="confirm-password">Confirmar senha
+            <input type="password" name="confirm-password" placeholder="Confirmar senha" required>
+          </label>
         </div>
         <button type="submit" value="">Criar conta</button>
       </form>
@@ -65,4 +69,3 @@
   <script src="./script.js"></script>
 </body>
 </html>
-    

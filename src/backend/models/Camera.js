@@ -1,23 +1,19 @@
 const DatabaseHandler = require("../database/DatabaseHandler.js")
 
-class Empresa extends DatabaseHandler {
+class Camera extends DatabaseHandler {
 
     constructor(connection) {
-        super()
+        super(connection)
         this.connection = connection
     }
-    create(callback, nome, telefone, email, endereco, cnpj, senha) {
+    create(callback, tipo, localizacao) {
         super.openConnection()
 
-        const sql = "INSERT INTO empresa (nome, telefone, email, endereco, cnpj, senha) VALUES (?,?,?,?,?,?);"
+        const sql = "INSERT INTO camera (tipo, localizacao) VALUES (?,?);"
 
         const values = [
-            nome,
-            telefone,
-            email,
-            endereco,
-            cnpj,
-            senha,
+            tipo,
+            localizacao,
         ]
 
         this.connection.query(
@@ -36,4 +32,4 @@ class Empresa extends DatabaseHandler {
     }
 }
 
-module.exports = Empresa
+module.exports = Camera
