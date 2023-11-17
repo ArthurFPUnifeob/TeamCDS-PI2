@@ -3,10 +3,10 @@ const DatabaseHandler = require("../database/DatabaseHandler.js")
 class Empresa extends DatabaseHandler {
 
     constructor(connection) {
-        super(connection)
+        super()
         this.connection = connection
     }
-    create(callback, nome, telefone, email, endereço, cnpj, senha) {
+    create(callback, nome, telefone, email, endereco, cnpj, senha) {
         super.openConnection()
 
         const sql = "INSERT INTO empresa (nome, telefone, email, endereco, cnpj, senha) VALUES (?,?,?,?,?,?);"
@@ -15,7 +15,7 @@ class Empresa extends DatabaseHandler {
             nome,
             telefone,
             email,
-            endereço,
+            endereco,
             cnpj,
             senha,
         ]
