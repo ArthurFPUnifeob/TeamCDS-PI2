@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
 require('electron-reloader')(module)
 
 
@@ -12,7 +12,7 @@ function createWindow () {
   }
   })
 
-  win.loadFile('src/renderer/singin/singin.html')
+  win.loadFile('src/renderer/home/index.html')
 }
 
 app.whenReady().then(() => {
@@ -30,5 +30,14 @@ app.whenReady().then(() => {
     app.quit()
   }
 })
+
+ipcMain.handle('load-home-page', () => {
+  let currentWindow = BrowserWindow.getFocusedWindow();
+  currentWindow.loadFile('src/renderer/home/index.html');
+});
+ipcMain.handle('load-dasbord-page', () => {
+  let currentWindow = BrowserWindow.getFocusedWindow();
+  currentWindow.loadFile('src/renderer/dashbord/dashbord.html');
+});
 
 

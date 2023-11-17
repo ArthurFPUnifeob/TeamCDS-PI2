@@ -7,12 +7,13 @@ singinForm.addEventListener("submit", async (e) => {
     e.preventDefault()
     const singinFormData = new FormData(singinForm)
     const singinView = new SinginView(singinFormData)
-    const empCont = new EmpresaController(singinView.mapData)
-    empCont.createNewEmpresa()
-    await ipcRenderer.invoke('load-home-page');
+    const empController = new EmpresaController(singinView.mapData)
+    if(empController.validadeLogin()){
+        await ipcRenderer.invoke('load-dasbord-page');
+    }
 })
 
-class SinginView {
+class HomeView {
     constructor(formdata) {
         this.formdata = formdata
         this.mapData = new Map()
