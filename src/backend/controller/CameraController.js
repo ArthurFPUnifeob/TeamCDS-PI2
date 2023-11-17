@@ -16,7 +16,7 @@ class CameraController extends Camera {
 
     createNewCamera() {
         console.log(this.data)
-        super.create(this.#callback, this.data.get('tipo'),this.dat.get('localizacao') )        // Tem que adicionar o FOREIGN KEY (empresa_idempresa)
+        super.create(this.#callback, this.data.get('tipo'),this.data.get('localizacao') )        // Tem que adicionar o FOREIGN KEY (empresa_idempresa)
         
     }
 }
