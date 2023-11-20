@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+
   <meta name="description" content="descrição da pagina para SEO">
 
   <!-- All links to css here -->
@@ -51,11 +50,13 @@
     <ul class="navbar-items">
       <li>
         <div class="dropdown">
-        <button class="dropbtn">Opções de IA</button>
-          <div class="dropdown-content">
+          <button onclick="myFunction('myDropdown')" class="dropbtn">Opções de inteligência Artificial</button>
+          <div id="myDropdown" class="dropdown-content">
             <h4>Confiança na detecção</h4>
-            <p>Regulamenta a confiabilidade da IA em separar casos de incidentes de não incidentes,uma precisão maior separa só os casos onde a certeza de perigo. Diminua a para receber mais ocorrecias de possiveis incidentes.</p>
+            <p>Regulamenta a confiabilidade da IA em separar casos de incidentes de não incidentes, uma precisão maior separa só os casos onde a certeza de perigo. Diminua a para receber mais ocorrências de possíveis incidentes.</p>
+            <input type="range" name="range-input" id="range-input">
             <h4>Aglomeração máxima permitida</h4>
+            
             <div class="max-input">
               <p>Câmera 1 </p> 
               <input type="number" name="agr_max" class="agr_max"  placeholder="100 pessoas" required>
@@ -79,35 +80,38 @@
             <div class="max-input">
               <p>Câmera 6 </p> 
               <input type="number" name="agr_max" class="agr_max"  placeholder="100 pessoas" required>
+            </div>
           </div>
         </div>
       </li>
       <li>
         <div class="dropdown">
-          <button class="dropbtn">Gerenciar senhas</button>
-          <div class="dropdown-content">
+          <button onclick="myFunction('myDropdown_1')" class="dropbtn">Gerenciar Senhas</button>
+          <div id="myDropdown_1" class="dropdown-content">
             <h4>Criar nova senha</h4>
             <p>A senha de descanso serve para o login no aplicativo ao sair. Você pode redefinir a senha quando quiser.</p>
             <input type="text" name="current-password" id="current password" placeholder="Digite a senha atual " required>
             <input type="text" name="new-password" id="new-password" placeholder="Digite a nova senha " required>
             <input type="text" name="new-password" id="new-password" placeholder="Confirme a nova senha " required>
+            
           </div>
-        </div> 
+        </div>
       </li>
       <li>
         <div class="dropdown">
-          <button class="dropbtn">Gerenciar câmeras</button>
-          <div class="dropdown-content">
+          <button onclick="myFunction('myDropdown_2')" class="dropbtn">Gerenciar câmeras</button>
+          <div id="myDropdown_2" class="dropdown-content">
             <button id="add_camera"><i class="bi bi-plus-circle"></i>Adicionar câmera</button>
             <button id="rmv_camera"><i class="bi bi-x-circle"></i>Remover câmera</button>
             
           </div>
         </div>
       </li>
+      
     
   </ul>
   </nav>
   </main>
-  
+  <script src="./adminScreen.js"></script>
 </body>
 </html>
