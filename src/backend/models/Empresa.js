@@ -6,6 +6,7 @@ class Empresa extends DatabaseHandler {
         super()
         this.connection = connection
     }
+
     create(callback, nome, telefone, email, endereco, cnpj, senha) {
         super.openConnection()
 
@@ -33,6 +34,30 @@ class Empresa extends DatabaseHandler {
         );
 
         super.closeConnection();
+    }
+
+    getID(cnpj, password) {
+        return new Promise((resolve, reject) => {
+            super.openConnection();
+
+            const sql = `select idempresa from empresa where cnpj = ? and senha = ?`;
+
+            const values = [
+                cnpj, 
+                password
+            ];
+
+            this.connection.query(sql, values, (erro, results) => {
+                if (erro) {
+                    reject(erro);
+                } else {
+                    resolve(results);
+                }
+                super.closeConnection();
+            });
+
+            
+        });
     }
 }
 

@@ -1,16 +1,17 @@
 const { ipcRenderer } = require('electron');
 const EmpresaController = require('../../backend/controller/EmpresaController.js')
+const loginForm = document.getElementById('login-form')
 
-singinForm = document.getElementById("singin-form")
-
-singinForm.addEventListener("submit", async (e) => {
+loginForm.addEventListener("submit", (e) => {
     e.preventDefault()
-    const singinFormData = new FormData(singinForm)
-    const singinView = new SinginView(singinFormData)
-    const empController = new EmpresaController(singinView.mapData)
-    if(empController.validadeLogin()){
-        await ipcRenderer.invoke('load-dasbord-page');
-    }
+    const loginFormData = new FormData(loginForm)
+    const loginView = new HomeView(loginFormData)
+    const empController = new EmpresaController(loginView.mapData)
+    empController.validadeLogin().then(async (result) => {
+        if(result){
+            await ipcRenderer.invoke('load-dashbord-page', result.idempresa);
+        }
+    })
 })
 
 class HomeView {
@@ -25,3 +26,4 @@ class HomeView {
         }
     }
 }
+
