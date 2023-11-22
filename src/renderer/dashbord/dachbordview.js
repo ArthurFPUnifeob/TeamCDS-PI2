@@ -5,8 +5,8 @@ const incidenteController = new IncidenteController()
 let empresaID
 let BDdata
 
-ipcRenderer.on('getEmpresaID', (_,empresaid) =>{
-  empresaID = empresaid
+/* ipcRenderer.on('getEmpresaID', (_, empresaid) => { */
+  empresaID = 1
   incidenteController.getData(empresaID).then(result => {
 
     BDdata = result
@@ -17,7 +17,7 @@ ipcRenderer.on('getEmpresaID', (_,empresaid) =>{
         this.barsCanva = barsCanva;
         this.pieCanva = pieCanva;
       }
-  
+
       #configurarGraficoBase() {
         return {
           responsive: true,
@@ -37,9 +37,17 @@ ipcRenderer.on('getEmpresaID', (_,empresaid) =>{
           },
         };
       }
-  
+
       genereteLineGrafic() {
         const data = new GraficsGeneretor(BDdata);
+
+        // Ordenar os rótulos dos meses
+        data.dataLineObj.lables.sort((a, b) => {
+          const [aYear, aMonth] = a.split('-').map(Number);
+          const [bYear, bMonth] = b.split('-').map(Number);
+          return aYear - bYear || aMonth - bMonth;
+        });
+
         new Chart(this.lineCanva, {
           type: 'line',
           data: {
@@ -75,7 +83,7 @@ ipcRenderer.on('getEmpresaID', (_,empresaid) =>{
           },
         });
       }
-  
+
       genereteBarsGrafic() {
         const data = new GraficsGeneretor(BDdata);
         new Chart(this.barsCanva, {
@@ -113,7 +121,7 @@ ipcRenderer.on('getEmpresaID', (_,empresaid) =>{
           },
         });
       }
-  
+
       generetePieGrafic() {
         const data = new GraficsGeneretor(BDdata);
         new Chart(this.pieCanva, {
@@ -140,7 +148,7 @@ ipcRenderer.on('getEmpresaID', (_,empresaid) =>{
         });
       }
     }
-  
+
     class GraficsGeneretor {
       constructor(data) {
         this.data = data;
@@ -150,18 +158,18 @@ ipcRenderer.on('getEmpresaID', (_,empresaid) =>{
         this.dataBarObj = { lables: [], datasets: [] };
         this.dataPieObj = { lables: [], datasets: [] };
         this.cores = [
-          '#AC3F3F',
-          '#597396',
-          '#1B2559',
-          '#FBBB00',
-          '#05CD99',
-          '#9A4DFF',
-          '#FF7F50',
-          '#008080',
-          '#800080',
-          '#00CED1',
-          '#FFD700',
-          '#7CFC00',
+          'rgba(172, 63, 63, 0.7)',
+          'rgba(89, 115, 150, 0.7)',
+          'rgba(27, 37, 89, 0.7)',
+          'rgba(251, 187, 0, 0.7)',
+          'rgba(5, 205, 153, 0.7)',
+          'rgba(154, 77, 255, 0.7)',
+          'rgba(255, 127, 80, 0.7)',
+          'rgba(0, 128, 128, 0.7)',
+          'rgba(128, 0, 128, 0.7)',
+          'rgba(0, 206, 209, 0.7)',
+          'rgba(255, 215, 0, 0.7)',
+          'rgba(124, 252, 0, 0.7)',
         ];
         this.#gemLineDatasets();
         this.#gemBarDatasets();
@@ -187,14 +195,26 @@ ipcRenderer.on('getEmpresaID', (_,empresaid) =>{
           })
         }
       }
-  
+
       #extrairDadosMonth(month) {
-        return this.data.filter((incidente) => incidente.month === month).map((incidente) => {
-          if (!this.dataBarObj.lables.includes(`${incidente.year}-${incidente.month}`)) {
-            this.dataBarObj.lables.push(`${incidente.year}-${incidente.month}`)
+        const incidentsForMonth = this.data.filter((incidente) => incidente.month === month);
+        const result = [];
+      
+        incidentsForMonth.forEach((incidente) => {
+          const label = `${incidente.year}-${incidente.month}`;
+          const existingBar = result.find((bar) => bar.x === label);
+      
+          if (existingBar) {
+            existingBar.y += incidente.contador;
+          } else {
+            result.push({
+              x: label,
+              y: incidente.contador,
+            });
           }
-          return { x: `${incidente.year}-${incidente.month}`, y: incidente.contador }
         });
+      
+        return result;
       }
       #gemBarDatasets() {
         for (let i = 0; i < this.months.length; i++) {
@@ -207,39 +227,39 @@ ipcRenderer.on('getEmpresaID', (_,empresaid) =>{
           })
         }
       }
-  
+
       #gemPieDatasets() {
         const dadosPie = this.#extrairDadosContator();
-  
+
         this.dataPieObj.datasets.push({
           data: dadosPie.datasets,
           backgroundColor: this.cores.slice(0, dadosPie.lables.length),
           borderWidth: 0, // Remover bordas
         });
-  
+
         this.dataPieObj.lables = dadosPie.lables;
       }
-  
+
       #extrairDadosContator() {
         const dadosContator = {};
-  
+
         this.data.forEach((incidente) => {
           const tipo = incidente.tipo;
-  
+
           if (!(tipo in dadosContator)) {
             dadosContator[tipo] = 0;
           }
-  
+
           dadosContator[tipo] += incidente.contador;
         });
-  
+
         const lables = Object.keys(dadosContator);
         const datasets = lables.map((tipo) => dadosContator[tipo]);
-  
+
         return { lables, datasets };
       }
     }
-  
+
     const dachbordView = new DasbordView(
       document.getElementById('line').getContext('2d'),
       document.getElementById('bars').getContext('2d'),
@@ -251,5 +271,5 @@ ipcRenderer.on('getEmpresaID', (_,empresaid) =>{
     .catch(error => {
       console.log(error)
     });
-})
+/* }) */
 
