@@ -18,19 +18,17 @@ class DatabaseHandler {
     }
 
     closeConnection() {
-        connection.end((error) => {
-            if (error) {
-                console.error(
-                    "Erro ao fechar no banco" +
-                    error.message
-                )
-            } else {
-                console.log(
-                    "Conexão encerrada com sucesso"
-                )
-            }
+        if (connection.state === 'connected') {
+            connection.end((error) => {
+                if (error) {
+                    console.error("Erro ao fechar no banco" + error.message);
+                } else {
+                    console.log("Conexão encerrada com sucesso");
+                }
+            });
+        } else {
+            console.log("Conexão já encerrada.");
         }
-        )
     }
 
 }
