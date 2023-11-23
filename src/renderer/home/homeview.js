@@ -1,3 +1,4 @@
+localStorage.clear()
 const { ipcRenderer } = require('electron');
 const EmpresaController = require('../../backend/controller/EmpresaController.js')
 const loginForm = document.getElementById('login-form')
@@ -9,7 +10,8 @@ loginForm.addEventListener("submit", (e) => {
     const empController = new EmpresaController(loginView.mapData)
     empController.validadeLogin().then(async (result) => {
         if(result){
-            await ipcRenderer.invoke('load-dashbord-page', result.idempresa);
+            localStorage.setItem('idEmpresa', `${result.idempresa}`);
+            await ipcRenderer.invoke('load-dashboard-page');
         }
     })
 })
@@ -26,4 +28,3 @@ class HomeView {
         }
     }
 }
-

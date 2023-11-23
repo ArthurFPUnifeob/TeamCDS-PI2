@@ -37,11 +37,12 @@ app.whenReady().then(() => {
     currentWindow.loadFile('src/renderer/home/index.html');
   });
 
-  ipcMain.handle('load-dashbord-page', async (_,data) => {
+  ipcMain.handle('load-dashboard-page', async (_,data) => {
     let currentWindow = BrowserWindow.getFocusedWindow();
-    await currentWindow.loadFile(`src/renderer/dashbord/dashbord.html`);
+    await currentWindow.loadFile(`src/renderer/dashboard/dashboard.html`);
     globalEmpresaID = data
     win.webContents.send('getEmpresaID', globalEmpresaID)
   });
 
 })
+
