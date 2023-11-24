@@ -2,11 +2,9 @@ const { ipcRenderer } = require('electron');
 const IncidenteController = require("../../backend/controller/IncidenteController");
 const incidenteController = new IncidenteController()
 
-let empresaID
+let empresaID = localStorage.getItem('idEmpresa')
 let BDdata
 
-ipcRenderer.on('getEmpresaID', (_,empresaid) =>{
-  empresaID = empresaid
   incidenteController.getData(empresaID).then(result => {
 
     BDdata = result
@@ -251,5 +249,4 @@ ipcRenderer.on('getEmpresaID', (_,empresaid) =>{
     .catch(error => {
       console.log(error)
     });
-})
 
