@@ -18,10 +18,8 @@ class EmpresaController extends Empresa {
         try {
             
             const result = await super.getID(
-                /* this.data.get('cnpj'),
-                this.data.get('password') */
-                '59.764.555/0001-52',
-                'unifeob@123'
+                this.data.get('cnpj'),
+                this.data.get('password') 
             )
             return result[0]
         }

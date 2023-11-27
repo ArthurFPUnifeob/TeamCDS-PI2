@@ -38,6 +38,14 @@ let BDdata
   
       genereteLineGrafic() {
         const data = new GraficsGeneretor(BDdata);
+
+        // Ordenar os rótulos dos meses
+        data.dataLineObj.lables.sort((a, b) => {
+          const [aYear, aMonth] = a.split('-').map(Number);
+          const [bYear, bMonth] = b.split('-').map(Number);
+          return aYear - bYear || aMonth - bMonth;
+        });
+
         new Chart(this.lineCanva, {
           type: 'line',
           data: {
@@ -187,13 +195,26 @@ let BDdata
       }
   
       #extrairDadosMonth(month) {
-        return this.data.filter((incidente) => incidente.month === month).map((incidente) => {
-          if (!this.dataBarObj.lables.includes(`${incidente.year}-${incidente.month}`)) {
-            this.dataBarObj.lables.push(`${incidente.year}-${incidente.month}`)
+        const incidentsForMonth = this.data.filter((incidente) => incidente.month === month);
+        const result = [];
+      
+        incidentsForMonth.forEach((incidente) => {
+          const label = `${incidente.year}-${incidente.month}`;
+          const existingBar = result.find((bar) => bar.x === label);
+      
+          if (existingBar) {
+            existingBar.y += incidente.contador;
+          } else {
+            result.push({
+              x: label,
+              y: incidente.contador,
+            });
           }
-          return { x: `${incidente.year}-${incidente.month}`, y: incidente.contador }
         });
+      
+        return result;
       }
+      
       #gemBarDatasets() {
         for (let i = 0; i < this.months.length; i++) {
           this.dataBarObj.datasets.push({

@@ -12,6 +12,9 @@ loginForm.addEventListener("submit", (e) => {
         if(result){
             localStorage.setItem('idEmpresa', `${result.idempresa}`);
             await ipcRenderer.invoke('load-dashboard-page');
+        } else{
+            document.getElementById('passwordError').style.display = 'block';
+            document.getElementById('erro').style.display='none';
         }
     })
 })
