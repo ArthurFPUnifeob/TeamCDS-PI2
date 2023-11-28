@@ -46,6 +46,8 @@ let BDdata
           return aYear - bYear || aMonth - bMonth;
         });
 
+        console.log(data.dataLineObj.datasets)
+
         new Chart(this.lineCanva, {
           type: 'line',
           data: {
@@ -150,7 +152,7 @@ let BDdata
     class GraficsGeneretor {
       constructor(data) {
         this.data = data;
-        this.typeData = ['Incendio', 'Roubo', 'Intrusão', 'Vandalismo', 'Furto', 'Assalto'];
+        this.typeData = ['Incêndio', 'Roubo', 'Intrusão', 'Vandalismo', 'Furto', 'Assalto'];
         this.months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
         this.dataLineObj = { lables: [], datasets: [] };
         this.dataBarObj = { lables: [], datasets: [] };

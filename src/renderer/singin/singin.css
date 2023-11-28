@@ -2,8 +2,8 @@
     display: flex; 
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
+    width: 98vw;
+    height: 90vh;
 }
 
 /* form styles */
@@ -13,12 +13,12 @@
     gap: 20px;    
 }
 .form-container{
-    width: 40%;
+    width: 50%;
     height: fit-content;
     border-radius: 8px;
     background: #91B0C5; ;
     padding: 15px 20px;
-    margin-top: 25px;
+    margin-top: 50px;
     color: #333;
     text-align: center;
 }
